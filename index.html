@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH-TUBE</title>
+
+    <!-- daisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- custom CSS -->
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .max-width {
+            max-width: 1320px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="max-width mx-auto">
+        <nav class="flex items-center justify-between py-5 border-b-2 border-[#17171720]">
+            <div>
+                <img class="w-[130px]" src="./assets/Logo.png" alt="">
+            </div>
+            <div>
+                <button class="btn py-3 px-6 rounded-md text-lg font-medium">Sort by View</button>
+            </div>
+            <div>
+                <button class="bg-[#FF1F3D] text-white btn py-3 px-6 rounded-md text-lg font-medium">Blog</button>
+            </div>
+        </nav>
+        <!-- dynamic navbar -->
+        <nav id="dynamic-navbar">
+
+        </nav>
+    </header>
+
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
