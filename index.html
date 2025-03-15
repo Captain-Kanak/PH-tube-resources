@@ -33,6 +33,11 @@
         .max-width {
             max-width: 1320px;
         }
+
+        .active {
+            background-color: #FF1F3D;
+            color: white;
+        }
     </style>
 </head>
 
@@ -43,17 +48,54 @@
                 <img class="w-[130px]" src="./assets/Logo.png" alt="">
             </div>
             <div>
-                <button class="btn py-3 px-6 rounded-md text-lg font-medium">Sort by View</button>
+                <label class="input">
+                    <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <g stroke-linejoin="round" stroke-linecap="round" stroke-width="2.5" fill="none"
+                            stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.3-4.3"></path>
+                        </g>
+                    </svg>
+                    <input id="search-input" type="search" required placeholder="Search" />
+                </label>
             </div>
             <div>
-                <button class="bg-[#FF1F3D] text-white btn py-3 px-6 rounded-md text-lg font-medium">Blog</button>
+                <button class="bg-[#FF1F3D] text-white btn py-3 px-6 rounded-md text-lg font-medium">Sort By
+                    View</button>
             </div>
         </nav>
-        <!-- dynamic navbar -->
-        <nav id="dynamic-navbar">
-
+        <!-- dynamic categories navbar -->
+        <nav id="category-container" class="flex justify-center gap-6 py-5">
+            <div>
+                <button id="btn-all" onclick="loadVideos()" class="btn btn-sm">All</button>
+            </div>
         </nav>
     </header>
+    <main class="max-width mx-auto mt-5">
+        <!-- video container -->
+        <section id="videos-container" class="grid grid-cols-4 gap-6">
+            <div class="py-20 col-span-full flex flex-col items-center justify-center gap-5">
+                <img class="w-[140px]" src="./assets/Icon.png" alt="">
+                <h2 class="text-3xl font-bold">Oops!! Sorry, There is no content here</h2>
+            </div>
+        </section>
+        <!-- video details modal -->
+        <section>
+            <!-- Open the modal using ID.showModal() method -->
+            <!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+            <dialog id="video_details" class="modal">
+                <div class="modal-box">
+                    <div id="details_container"></div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </section>
+    </main>
 
     <script src="./scripts/index.js"></script>
 </body>
